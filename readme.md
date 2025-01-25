@@ -1,7 +1,13 @@
-python.exe -m pip install --upgrade pip
-py -3.10  -m venv c-ai
-.\c-ai\Scripts\activate
+python -m ensurepip --upgrade
+#Upgrade pip to the latest version:
 
-pip install pip-tools
-pip-compile requirements.in
-pip install -r requirements.txt
+python -m pip install --upgrade pip
+pip install pyparsing
+pip install pyinstaller
+pyinstaller --onefile --noconsole docker_manager.py
+
+
+
+
+
+
